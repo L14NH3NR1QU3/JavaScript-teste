@@ -7,10 +7,21 @@
     </head>
     <body>
         <script>
-            let pessoa = {};
-            pessoa.nome = "Ramon";
-            document.write(pessoa.nome);
-            console.log(JSON.stringify(pessoa));
+            let lista = {};
+            lista["id"] = 1;
+            lista["nome"] = prompt("Digite seu nome: ");
+            lista["idade"] = parseInt(prompt("Digite sua idade: "));
+            lista.start = function(){
+                if(lista.idade >= 18){
+                    document.write(" é maior de idade!");
+                }
+                else{
+                    document.write(" é menor de idade!")
+                }
+            }
+            document.write(lista.nome);
+            lista.start();
+            console.log(lista);
         </script>
     </body>
 </html>
