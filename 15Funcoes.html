@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function mostrarNome(){
+                console.log("Ramon de Holanda!");
+            }
+            mostrarNome();
+            let mostrarDia = function(){
+                console.log("Quarta feira");
+            }
+            mostrarDia();
+            let mostrarAno = () => {
+                console.log("2025");
+            }
+            mostrarAno();
+            let soma = (a, b) => {
+                return a + b;
+            }
+            let resultado = soma(10, 3);
+            console.log(resultado);
+            let pessoa = {
+                nome: "Ramon",
+                idade: 18
+            }
+            console.log(pessoa);
+            let mudaNome = (objPessoa) => {
+                objPessoa.nome = "Lucas"
+                objPessoa.cidade = "Guarapari"
+            }
+            mudaNome(pessoa);
+            console.log(pessoa);
+        </script>
+    </body>
+</html>
