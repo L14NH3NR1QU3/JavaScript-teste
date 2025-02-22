@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let maiuscula = () => {
+                let texto = document.getElementById("txt").value;
+                let res = document.getElementById("texto");
+                res.textContent = texto.toUpperCase();
+                return;
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Letra maiuscula</h1>
+        <div>
+            <label for="texto">Texto</label>
+            <input type="text" name="" id="txt">
+            <button id="text" onclick="maiuscula()">Enviar</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p id="texto"> </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let percent = () => {
+                let num = parseFloat(document.getElementById("numero").value);
+                let por = parseFloat(document.getElementById("porcentagem").value);
+                let txt = document.getElementById("texto");
+                por /= 100;
+                num *= por;
+                txt.textContent = "Resultado: "+num;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Porcentagem</h1>
+        <div>
+            <label for="">Numero</label>
+            <input type="text" name="" id="numero" placeholder="Ex: 20">
+            <label for="">Porcentagem(%)</label>
+            <input type="text" name="" id="porcentagem" placeholder="Ex: 10">
+            <button onclick="percent()">Calcular</button>
+        </div>
+        <div><p id="texto"></p></div>
+    </body>
+</html>

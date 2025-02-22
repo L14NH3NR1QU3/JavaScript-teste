@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+        let calcIMC = () => {
+            let altura = parseFloat(document.getElementById("altura").value);
+            let peso = parseFloat(document.getElementById("peso").value);
+            let resultado = document.getElementById("resultado");
+
+            if (isNaN(altura) || isNaN(peso) || altura <= 0.50 || peso <= 5) {
+                resultado.textContent = "Insira valores validos.";
+                return;
+            }
+
+            let imc = peso/(altura^2);
+            resultado.textContent = "Seu IMC é: "+imc.toFixed(2);
+        }
+    </script>
+    <body>
+        <h1>IMC</h1>
+        <div>
+            <label for="altura">Altura (m)</label>
+            <input type="text" name="altura" id="altura" placeholder="Ex: 1.75">
+            <label for="peso">Peso (kg)</label>
+            <input type="text" name="altura" id="peso" placeholder="Ex: 80">
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="calcIMC()">Calcular</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <label id="resultado"></label>
+        </div>
+    </body>
+</html>

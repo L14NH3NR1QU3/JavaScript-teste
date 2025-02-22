@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let palindromo = () => {
+                let palavra = document.getElementById("palavra").value;
+                let res = document.getElementById("txt");
+                let ver = false;
+                console.log(palavra.split("").reverse().join(""));
+                if(palavra === palavra.split("").reverse().join("")){
+                    ver = true;
+                }
+                res.textContent = "Resultado: "+ver;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Palindromo</h1>
+        <div>
+            <label for="">Palavra</label>
+            <input type="text" name="" id="palavra">
+            <button onclick="palindromo()">Enviar</button>
+        </div>
+        <div>
+            <p id="txt"></p>
+        </div>
+    </body>
+</html>

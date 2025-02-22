@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            window.onload = function(){
+                let res = document.getElementById("res");
+    
+                let array = [10, 9, 8, 7, 6];
+                let calc = 0;
+    
+                for(let i=0; i<array.length; i++){
+                    calc += array[i];
+                    console.log(calc);
+                }
+    
+                calc /= array.length;
+    
+                console.log(calc);
+
+                console.log(res);
+    
+                res.textContent = "Resultado: "+calc;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Calculo aritimedico</h1>
+        <p id="res"></p>
+    </body>
+</html>

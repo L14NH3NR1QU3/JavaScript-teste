@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function primo(){
+                let texto = document.getElementById("verificador");
+                let num = parseFloat(document.getElementById("envia").value);
+                let quanti = 0;
+                let ver = false;
+                for (let i = 1; i <= num; i++) {
+                    if(num%i == 0){
+                        quanti++;
+                    }
+                }
+                if(quanti == 2){
+                    ver = true;
+                }
+                texto.textContent = "Numero primo: "+ver;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Numero primo</h1>
+        <div>
+            <label for="">Numero</label>
+            <input type="text" name="" id="envia">
+            <button onclick="primo()">Enviar</button>
+        </div>
+        <div><p id="verificador"></p></div>
+    </body>
+</html>
